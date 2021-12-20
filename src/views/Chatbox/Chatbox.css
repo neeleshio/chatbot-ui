@@ -1,0 +1,181 @@
+#chatbox {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.chatbox-wrapper {
+    position: relative;
+    min-width: 350px;
+    max-width: 370px;
+    height: 560px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 0 50px rgb(0 0 0 / 50%);
+    margin: 30px 30px 20px 30px;
+}
+
+.chatbox-top {
+    background: linear-gradient(123.75deg, #F5821F 1.87%, #FF5C00 120.46%);
+    height: 50%;
+    border-radius: 18px 18px 0 0;
+    color: #FFFFFF;
+    padding: 20px 0 0 45px;
+}
+
+.chatbox-intro {
+    margin-top: 10px;
+}
+
+.chatbox-top h1, .chatbox-top h2 {
+    font-weight: 500;
+}
+
+.faq-wrapper {
+    width: 315px;
+    height: 350px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0px 0px 25px 0px #0000000D;
+    border: 1px solid #00000025;
+    padding: 0 20px 20px 20px;
+}
+
+.faq-wrapper .bot-img {
+    background: linear-gradient(180deg, #FF7600 0%, #FF5C00 100%);
+    background-color: #F5821F;
+    box-shadow: 0px 0px 15px 0px #00000026;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -7.5%;
+}
+
+.faq-wrapper .bot-img img {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+}
+
+.faq-wrapper h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.faq-wrapper h2::after {
+    content: '?';
+    display: inline-block;
+    background: #F7B7311F;
+    color: #FF5C00;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.faq-wrapper .faq-lists {
+    margin-top: 40px;
+}
+
+.faq-wrapper .faq-lists ul li span{
+    font-size: 10px;
+    height: auto;
+    color: #FF7600CC;
+    border-radius: 50%;
+    margin: 0px 5px;
+}
+
+.faq-wrapper .faq-lists ul li {
+    border: 1px solid #E1E1E1;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 12px 0;
+    color: #2D2D2D;
+    margin-top: 9px;
+}
+
+.start-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.start-btn button {
+    padding: 10px 25px;
+    border-radius: 100px;
+    border: 1px solid #D1D1D1;
+    box-shadow: 0px 4px 5px 0px #0000001A;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: flex-end;
+}
+
+.start-btn button img {
+    padding-right: 6px;
+}
+
+#chatbox {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+#chatbox { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+.fadeOut { animation-name: fadeOutBottom }
+@keyframes fadeOutBottom {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to { opacity: 0 }
+}
+
+.close-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 10px 5px 0;
+    background-color: rgb(236, 235, 247);
+    border: 0;
+    border-radius: 20px;
+    padding: 1px 7px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 420px) {
+    .chatbox-wrapper {
+        margin: 0;
+        border-radius: 18px 18px 0 18px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #chatbox {
+        width: 335px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #chatbox {
+        width: 315px;
+    }
+}
