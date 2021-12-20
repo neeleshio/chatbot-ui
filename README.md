@@ -1,7 +1,7 @@
 <h1 align="center">
   CHATBOT UI
 </h1>
-<h4 align="center">Responsive corona cases tracker webapp built with ReactJs.</h4>
+<h4 align="center">A responsive chatbot-ui built with ReactJs.</h4>
 <div align="center">
   <a href="https://chatbot-ui.vercel.app/"><img src="https://img.shields.io/badge/host-vercel-success">
   <img src="https://img.shields.io/badge/contributions-welcome-orange.svg">
