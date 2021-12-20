@@ -9,14 +9,22 @@ function Homescreen() {
         setOpen(!open)
     }
 
+    const openLink = () => {
+        window.open('https://chatbot-ui-react.vercel.app/', '_blank');
+    }
+
+    const downloadFolder = () => {
+        //
+    }
+
     return (
         <div id="homescreen">
             <div className="project-info">
                 <h1 className="welcome">WELCOME</h1>
                 <h3>This project has been deployed on Vercel</h3>
                 <div className="buttons">
-                    <button className="view">View on Github</button>
-                    <button className="download">Download folder</button>
+                    <button className="view" onClick={openLink}>View on Github</button>
+                    <button className="download" onClick={downloadFolder}>Download folder</button>
                 </div>
             </div>
 
@@ -24,6 +32,9 @@ function Homescreen() {
                 {open && <Chatbox handleClose={handleOpen} />}
             </div>
             <div className="chat-button">
+                <div className="tooltip">
+                    Hi, how can I help you?
+                </div>
                 <button onClick={handleOpen}>
                     <img src="./chat.png" alt="chat-icon" />
                 </button>
@@ -31,7 +42,7 @@ function Homescreen() {
 
             <h2 className="footer-text">CHATBOT UI <img src="./chat.png" width="25px" height="25px" /></h2>
 
-        </div>
+        </div >
     )
 }
 
