@@ -46,7 +46,7 @@
     padding: 0 20px 20px 20px;
 }
 
-.intro-bot-img {
+.bot-img-back {
     background: linear-gradient(180deg, #FF7600 0%, #FF5C00 100%);
     background-color: #F5821F;
     box-shadow: 0px 0px 15px 0px #00000026;
@@ -54,7 +54,7 @@
     height: 45px;
     border-radius: 50%;
     position: relative;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .faq-wrapper .bot-img {
@@ -68,7 +68,7 @@
     top: -7.5%;
 }
 
-.faq-wrapper .bot-img img, .intro-bot-img img  {
+.faq-wrapper .bot-img img, .bot-img-back img  {
     position: absolute;
     top: 47%;
     left: 50%;
@@ -77,7 +77,7 @@
     height: 30px;
 }
 
-.intro-bot-img img {
+.bot-img-back img {
     width: 25px;
     height: 25px;
 }
@@ -206,6 +206,19 @@
 @keyframes fadeInBottom {
     from {
         opacity: 0;
+    }
+    to { opacity: 1 }
+}
+.bot-img {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+.bot-img { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0.5;
     }
     to { opacity: 1 }
 }
