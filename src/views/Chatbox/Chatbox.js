@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './Chatbox.css'
 import { questions } from './questions'
 
-function Chatbox({ handleClose }) {
+function Chatbox({ handleClose, open }) {
     const [list, setList] = useState([])
     const [ques, setQues] = useState(0)
     const [faq, setFaq] = useState(false)
     const [startBtn, setStartBtn] = useState(false)
+    const [botImg, setBotImg] = useState(true)
 
     useEffect(() => {
         if (faq && ques < questions.length) {
@@ -25,6 +26,12 @@ function Chatbox({ handleClose }) {
         }, 2000);
     }, [])
 
+    useEffect(() => {
+        setTimeout(() => {
+            setBotImg(!botImg)
+        }, 3000);
+    }, [open])
+
     return (
         <div id="chatbox">
             <div className="chatbox-wrapper">
@@ -35,9 +42,11 @@ function Chatbox({ handleClose }) {
                         <p>I am Iris, a Virtual Assistant</p>
                         <p>How may I help you today?</p>
                     </div>
-                    <div className="intro-bot-img">
-                        <img src="./bot.svg" alt="bot" />
-                    </div>
+                    {botImg && (
+                        <div className="intro-bot-img">
+                            <img src="./bot.svg" alt="bot" />
+                        </div>
+                    )}
                 </div>
                 <div className="faq-wrapper">
                     <div className="bot-img">
