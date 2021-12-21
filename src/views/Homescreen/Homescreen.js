@@ -11,11 +11,11 @@ function Homescreen() {
     }
 
     const openLink = () => {
-        window.open('https://chatbot-ui-react.vercel.app/', '_blank');
+        window.open('https://github.com/neeleshio/chatbot-ui', '_blank');
     }
 
     const downloadFolder = () => {
-        //
+        window.open('https://github.com/neeleshio/chatbot-ui/archive/refs/heads/master.zip', '_blank');
     }
 
     return (
