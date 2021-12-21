@@ -42,11 +42,9 @@ function Chatbox({ handleClose, open }) {
                         <p>I am Iris, a Virtual Assistant</p>
                         <p>How may I help you today?</p>
                     </div>
-                    {botImg && (
-                        <div className="intro-bot-img">
-                            <img src="./bot.svg" alt="bot" />
-                        </div>
-                    )}
+                    <div className="intro-bot-img">
+                        <img src="./bot.svg" alt="bot" />
+                    </div>
                 </div>
                 <div className="faq-wrapper">
                     <div className="bot-img">
