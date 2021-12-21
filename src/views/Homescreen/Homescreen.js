@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Homescreen.css'
 import Chatbox from '../Chatbox/Chatbox'
 
 function Homescreen() {
     const [open, setOpen] = React.useState(false)
-    const [isClosed, setIsClosed] = React.useState(false)
 
     const handleOpen = () => {
         setOpen(!open)
@@ -41,7 +40,7 @@ function Homescreen() {
                 </button>
             </div>
 
-            <h2 className="footer-text">CHATBOT UI <img src="./chat.png" width="15px" height="15px" /></h2>
+            <h2 className="footer-text">CHATBOT UI <img src="./chat.png" width="15px" height="15px" alt="chat-png" /></h2>
 
         </div >
     )
