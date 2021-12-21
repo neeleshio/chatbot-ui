@@ -29,7 +29,7 @@ function Chatbox({ handleClose, open }) {
     useEffect(() => {
         setTimeout(() => {
             setBotImg(!botImg)
-        }, 3000);
+        }, 2000);
     }, [open])
 
     return (
