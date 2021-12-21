@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Homescreen.css'
 import Chatbox from '../Chatbox/Chatbox'
 
 function Homescreen() {
     const [open, setOpen] = React.useState(false)
+    const [isClosed, setIsClosed] = React.useState(false)
 
     const handleOpen = () => {
         setOpen(!open)
@@ -29,7 +30,7 @@ function Homescreen() {
             </div>
 
             <div className="chat-box">
-                {open && <Chatbox handleClose={handleOpen} />}
+                {open && <Chatbox handleClose={handleOpen} open={open} />}
             </div>
             <div className="chat-button">
                 <div className="tooltip">
@@ -40,7 +41,7 @@ function Homescreen() {
                 </button>
             </div>
 
-            <h2 className="footer-text">CHATBOT UI <img src="./chat.png" width="25px" height="25px" /></h2>
+            <h2 className="footer-text">CHATBOT UI <img src="./chat.png" width="15px" height="15px" /></h2>
 
         </div >
     )

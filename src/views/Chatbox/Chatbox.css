@@ -21,7 +21,7 @@
     height: 50%;
     border-radius: 18px 18px 0 0;
     color: #FFFFFF;
-    padding: 20px 0 0 45px;
+    padding: 20px 0 0 40px;
 }
 
 .chatbox-intro {
@@ -46,6 +46,17 @@
     padding: 0 20px 20px 20px;
 }
 
+.intro-bot-img {
+    background: linear-gradient(180deg, #FF7600 0%, #FF5C00 100%);
+    background-color: #F5821F;
+    box-shadow: 0px 0px 15px 0px #00000026;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 10px;
+}
+
 .faq-wrapper .bot-img {
     background: linear-gradient(180deg, #FF7600 0%, #FF5C00 100%);
     background-color: #F5821F;
@@ -57,13 +68,18 @@
     top: -7.5%;
 }
 
-.faq-wrapper .bot-img img {
+.faq-wrapper .bot-img img, .intro-bot-img img  {
     position: absolute;
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
+}
+
+.intro-bot-img img {
+    width: 25px;
+    height: 25px;
 }
 
 .faq-wrapper h2 {
@@ -103,13 +119,13 @@
     font-weight: 500;
     padding: 12px 0;
     color: #2D2D2D;
-    margin-top: 9px;
+    margin-top: 12px;
 }
 
 .start-btn {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .start-btn button {
@@ -126,6 +142,19 @@
     padding-right: 6px;
 }
 
+.close-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 10px 5px 0;
+    background-color: rgb(236, 235, 247);
+    border: 0;
+    border-radius: 20px;
+    padding: 1px 7px;
+    font-size: 12px;
+}
+
+/* ANIMATIONS */
 #chatbox {
     animation-duration: 0.5s;
     animation-fill-mode: both;
@@ -136,6 +165,75 @@
     from {
         opacity: 0;
         transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+.chatbox-top {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.chatbox-top { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+    }
+    to { opacity: 1 }
+}
+
+.chatbox-top h1, .chatbox-top h2, .chatbox-intro, .intro-bot-img {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+
+.chatbox-top h1, .chatbox-top h2, .chatbox-intro, .intro-bot-img { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+    }
+    to { opacity: 1 }
+}
+
+.faq-wrapper {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+.faq-wrapper { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+    }
+    to { opacity: 1 }
+}
+
+.faq-lists ul li {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+.faq-lists ul li { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+    }
+    to { opacity: 1 }
+}
+
+.start-btn {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+.start-btn { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
     }
     to { opacity: 1 }
 }
@@ -153,18 +251,6 @@
         transform: translateX(50%);
     }
     to { opacity: 1 }
-}
-
-.close-btn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0 10px 5px 0;
-    background-color: rgb(236, 235, 247);
-    border: 0;
-    border-radius: 20px;
-    padding: 1px 7px;
-    font-size: 12px;
 }
 
 @media screen and (max-width: 420px) {
